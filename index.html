@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reverse a Number</title>
+    <script>
+        function reverseNumber(number) {
+            let reversed = 0;
+
+            while (number !== 0) {
+                reversed = reversed * 10 + number % 10;
+                number = Math.floor(number / 10);
+            }
+
+            return reversed;
+        }
+
+       
+        const originalNumber = 32566243;
+        const reversed = reverseNumber(originalNumber);
+        console.log("Original Number: " + originalNumber);
+        console.log("Reversed Number: " + reversed);
+    </script>
+</head>
+
+<body>
+   
+    <p>Original Number: <span id="originalNumber"></span></p>
+    <p>Reversed Number: <span id="reversedNumber"></span></p>
+
+    <script>
+      
+        document.getElementById("originalNumber").textContent = originalNumber;
+        document.getElementById("reversedNumber").textContent = reversed;
+    </script>
+</body>
+
+</html>
